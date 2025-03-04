@@ -3,7 +3,7 @@ name: CICD
 on:
   push:
     branches:
-      - deploy-to-ec2
+      - main
 
 jobs:
   build:
@@ -32,4 +32,4 @@ jobs:
         run: docker -rm -f reactContainer
       - name: Run docker container 
         run: docker run -d -p 3000:00 --name reactContainer kene38/react-app
-        
+
